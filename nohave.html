@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .count-button {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 36px;
+            background-color: #ADD8E6;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+	.larger-heading {
+            font-size: 100px;
+        }
+    </style>
+    <script>
+        var count = 0;
+
+        function incrementCount() {
+            count++;
+            var countDisplay = document.getElementById("countDisplay");
+            countDisplay.textContent = count;
+	    if(count === 100){
+		    counttwo.textContent = "浪費時間";
+		}
+	    if(count === 1000){
+		    counttwo.textContent = "你真無聊";
+		}
+        }
+    </script>
+</head>
+<body>
+    <button class="count-button" onclick="incrementCount()">點擊無聊</button>
+    
+    <h1 class="larger-heading"><div id="countDisplay">0</div></h1>
+    <div id="counttwo">0</div>
+</body>
+</html>
